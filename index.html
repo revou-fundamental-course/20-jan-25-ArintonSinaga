@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal.BMI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo-container" style="text-align: left; display: flex; align-items: center;">
+            <img src="Logo.png" alt="Logo BMI Kalkulator" class="logo" style="margin-right: 10px;">
+            <p style="font-size: 20px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; align-self: flex-end;">Ari-Project</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left">
+            <div class="left-column">
+                <h1>Kalkulator BMI</h1>
+                <p>Berat badan yang ideal penting untuk kesehatan tubuh. Dengan mengontrol berat badan, kamu bisa mencegah berbagai masalah kesehatan, seperti diabetes, hipertensi, dan penyakit jantung.<p\>
+                <div><h2>Masukkan Data Anda</h2></div>
+                <form id="bmi-form">
+                    <p>
+                        <label for="gender">Jenis Kelamin</label>
+                        <select id="gender" required>
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="weight">Berat Badan (Kg)</label>
+                        <input type="number" id="weight" required>
+                    </p>
+
+                    <p>
+                        <label for="age">Usia (Tahun)</label>
+                        <input type="number" id="age" required>
+                    </p>
+
+                    <p>
+                        <label for="height">Tinggi Badan (Cm)</label>
+                        <input type="number" id="height" required>
+                    </p>
+
+                    <button type="button" id="calculate-btn" class="rounded-btn">Hitung BMI</button>
+                    <button type="reset" class="rounded-btn">Reset</button>
+                </form>
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter
+                    Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam Kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI=Kg/M&sup2;
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-column">
+                <h1>Hasil Kalkulator BMI</h1>
+                <div id="result-box">
+                    <p id="composition">Result</p>
+                </div>
+            <div style="display: flex; gap: 10p;flex-direction: row;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: stretch;">
+                <button1 class="rounded-btn" id="download-result">Download Hasil BMI</button1>
+                <button1 class="rounded-btn" id="contact-whatsapp" onclick="openWhatsAppTab()">Konsultasi Ahli Gizi Via Aplikasi</button1>
+                <button1 class="rounded-btn" id="contact-whatsapp" onclick="openWhatsAppTab()">Registrasi Online Ahli Gizi</button1>
+            
+                </div>
+            </div>
+                <h3>BMI Sepenuhnya tidak mewakili diagnosis menyeluruh dari Kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran anda terkait dengan berat badan anda.</h3>
+
+                <h4>Penyakit yang Berkaitan dengan Kegemukan:</h4>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthitis</li>
+                </ul>
+                <button class="rounded-btn" id="consult-doctor" onclick="openConsultationTab()">Konsultasi Dokter Via Aplikasi</button>
+                <script>
+                    function openConsultationTab() {
+                        const newTab = window.open('', '_blank');
+                        newTab.document.write(`
+                            <style>
+                                body {
+                                    background-color: #f0f0f0;
+                                    font-family: Arial, sans-serif;
+                                    text-align: center;
+                                    padding: 20px;
+                                }
+                                button {
+                                    margin: 10px;
+                                    padding: 10px 20px;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <h1>Pilih Platform Konsultasi</h1>
+                            <button onclick="window.location.href='https://www.gooddoctor.co.id'" style="background-color: purple; color: white;">Good Doctor</button>
+                            <button onclick="window.location.href='https://www.halodoc.com'" style="background-color: purple; color: white;">Halodoc</button>
+                        `);
+                    }
+                </script>
+                <div id="doctor-options" style="display: none;"></div>
+
+                <button class="rounded-btn" id="register-doctor" onclick="openWhatsAppTab()">Registrasi Online Sekarang</button>
+
+                <script>
+                    function openWhatsAppTab() {
+                        window.open('https://wa.me/6285772949058', '_blank');
+                    }
+                </script>
+
+                <footer>
+                    <p>&copy; 2025 Arinton Sinaga.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
