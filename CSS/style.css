@@ -1,0 +1,192 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #dca7d0, #e5718e, #793c7f);
+    color: #333;
+}
+
+header {
+    background: #e7b9da;
+    padding: 6px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container untuk dua kolom */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Kolom kiri */
+.left,
+.right {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Kolom kiri */
+.left {
+    background: linear-gradient(135deg, #ff7a18, #af002d);
+    color: white;
+}
+
+h1,
+h2 {
+    font-family: 'Helvetica', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label,
+select,
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #a70a85;
+    font-size: 16px;
+}
+
+input[type="number"],
+select {
+    background: #fff;
+    border-color: #930f6c;
+}
+
+button {
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d52f2f;
+}
+
+button:active {
+    background: #c12c2c;
+}
+
+/* Kolom kanan dengan hasil */
+.right {
+    background: #fff;
+    border: 2px solid #ddd;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#result-box {
+    background: linear-gradient(145deg, #f9c7d0, #f3e5f5);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#composition {
+    font-weight: bold;
+    font-size: 36px;
+    color: #4f4f4f;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #120202;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: linear-gradient(145deg, #f9c7d0, #f3e5f5);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+h4 {
+    color: #120202;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: linear-gradient(145deg, #fcb2c0, #f3e5f5);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #d10707;
+}
+
+/* Styling tombol lain */
+.rounded-btn {
+    background: #a4088f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.rounded-btn:hover {
+    background: #e85cd3;
+}
+
+.rounded-btn:active {
+    background: #4b0460;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 80px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.right footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media Queries for Mobile Devices */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .left,
+    .right {
+        width: 48%;
+    }
+}
